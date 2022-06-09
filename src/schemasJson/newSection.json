@@ -1,0 +1,53 @@
+{
+  "title": "Новый раздел",
+  "description": "",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Название раздела"
+    },
+    "description": {
+      "type": "string",
+      "title": "Подзаголовок"
+    },
+    "isArray": {
+      "title": "Позволить ввести информацию в этом разделе n раз",
+      "type": "boolean",
+      "default": false,
+      "enum": [true, false]
+    },
+    "auto_id": {
+      "title": "Автоматический ID",
+      "type": "boolean",
+      "default": true,
+      "enum": [true, false]
+    }
+  },
+  "dependencies": {
+    "auto_id": {
+      "oneOf": [
+        {
+          "properties": {
+            "auto_id": {
+              "enum": [false]
+            },
+            "id": {
+              "type": "string",
+              "title": "ID поля"
+            }
+          },
+          "required": ["id"]
+        },
+        {
+          "properties": {
+            "auto_id": {
+              "enum": [true]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

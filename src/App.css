@@ -1,0 +1,7 @@
+input[type=string] {
+  pointer-events: none;
+}
+
+body{
+  background-color: #b7b7b721;
+}

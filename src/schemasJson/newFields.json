@@ -1,0 +1,85 @@
+{
+  "title": "Новое поле",
+  "description": "",
+  "type": "object",
+  "required": ["fieldType", "title"],
+  "properties": {
+    "fieldType": {
+      "type": "string",
+      "title": "Тип",
+      "enum": ["Input", "Select", "CheckBox", "File", "Date"]
+    },
+    "title": {
+      "type": "string",
+      "title": "Название"
+    },
+    "description": {
+      "type": "string",
+      "title": "Описание"
+    },
+    "auto_id": {
+      "title": "Автоматический ID",
+      "type": "boolean",
+      "default": true,
+      "enum": [true, false],
+      "oneOf": [
+        {
+          "properties": {
+            "auto_id": {
+              "enum": [false]
+            },
+            "id": {
+              "type": "string",
+              "title": "ID поля"
+            }
+          },
+          "required": ["id"]
+        },
+        {
+          "properties": {
+            "auto_id": {
+              "enum": [true]
+            },
+            "id": {
+              "type": "string",
+              "title": "ID поля"
+            }
+          }
+        }
+      ]
+    },
+    "required": {
+      "type": "boolean",
+      "title": "Обязательное",
+      "default": false
+    }
+  },
+  "dependencies": {
+    "fieldType": {
+      "oneOf": [
+        {
+          "properties": {
+            "fieldType": {
+              "enum": ["Select"]
+            },
+            "options": {
+              "type": "array",
+              "title": "Поле из выбора",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["options"]
+        },
+        {
+          "properties": {
+            "fieldType": {
+              "enum": ["Input", "CheckBox", "File", "Date"]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
