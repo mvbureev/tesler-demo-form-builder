@@ -20,6 +20,7 @@ import Funnel from '../widgets/Funnel/Funnel'
 import RingProgress from '../widgets/RingProgress/RingProgress'
 import DashboardCard from '../DashboardCard/DashboardCard'
 import DashboardList from '../widgets/DashboardList/DashboardList'
+import FormBuilder from '../widgets/FormBuilder/FormBuilder'
 
 const skipWidgetTypes = [WidgetTypes.SecondLevelMenu]
 
@@ -37,6 +38,7 @@ const customWidgets: Partial<Record<CustomWidgetTypes | WidgetTypes, CustomWidge
     [CustomWidgetTypes.Funnel]: { component: Funnel, card: DashboardCard },
     [CustomWidgetTypes.RingProgress]: { component: RingProgress, card: DashboardCard },
     [CustomWidgetTypes.DashboardList]: { component: DashboardList, card: DashboardCard },
+    [CustomWidgetTypes.FormBuilder]: { component: FormBuilder },
     [WidgetTypes.AssocListPopup]: AssocListPopup,
     [WidgetTypes.PickListPopup]: PickListPopup
 }

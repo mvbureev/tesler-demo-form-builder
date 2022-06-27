@@ -1,0 +1,16 @@
+{
+  "name": "formbuilder",
+  "title": "formbuilder",
+  "template": "DashboardView",
+  "url": "/screen/formbuilder/view/formbuilder",
+  "widgets": [
+    {
+      "widgetName": "formbuilder",
+      "position": 1,
+      "gridWidth": 24
+    }
+  ],
+  "rolesAllowed": [
+   "TESLER_USER"
+  ]
+}
