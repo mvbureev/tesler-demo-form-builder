@@ -1,6 +1,7 @@
 import React from 'react'
 import { Operation, OperationGroup } from '@tesler-ui/core/interfaces/operation'
-import { Dropdown, Icon, Menu } from 'antd'
+import { Dropdown, Menu } from 'antd'
+import Icon from '@ant-design/icons'
 import OperationButton from '../../ui/OperationButton/OperationButton'
 import styles from './OperationsGroup.module.css'
 import { removeRecordOperationWidgets } from '../../../interfaces/widget'

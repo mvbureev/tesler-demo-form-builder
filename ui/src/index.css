@@ -4,3 +4,16 @@
     height: 100%;
     display: flex;
 }
+
+.dn-settings-panel {
+  width: 400px;
+}
+
+.ant-formily-item-label {
+  width: 200px !important;
+  max-width: 200px !important;
+}
+
+.dn-settings-form-content {
+  overflow-y: scroll;
+}

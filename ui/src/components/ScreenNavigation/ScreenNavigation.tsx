@@ -1,8 +1,8 @@
 import React from 'react'
-import { Menu, Icon } from 'antd'
+import { Menu } from 'antd'
+import Icon, { CoffeeOutlined } from '@ant-design/icons'
 import { changeLocation } from '@tesler-ui/core'
 import styles from './ScreenNavigation.module.css'
-import { ClickParam } from 'antd/lib/menu'
 import { useSelector } from 'react-redux'
 import { AppState } from '../../interfaces/storeSlices'
 
@@ -11,7 +11,7 @@ function ScreenNavigation() {
     const screenName = useSelector((state: AppState) => state.router.screenName)
     const selectedScreen = screens.find(item => item.name === screenName) || screens.find(screen => screen.defaultScreen) || screens[0]
     const screenUrl = selectedScreen?.url ?? `/screen/${screenName}`
-    const handleScreen = (e: ClickParam) => {
+    const handleScreen = (e: any) => {
         changeLocation(e.key)
     }
 
@@ -22,7 +22,7 @@ function ScreenNavigation() {
                     return (
                         <Menu.Item key={item.url} className={styles.Item}>
                             <span className={styles.MenuItemLink}>
-                                <Icon type={item.icon ? item.icon : 'coffee'} />
+                                {item.icon ? <Icon type={item.icon} /> : <CoffeeOutlined />}
                                 <span>{item.text}</span>
                             </span>
                         </Menu.Item>
