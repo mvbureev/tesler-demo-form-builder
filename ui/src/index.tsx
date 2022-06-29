@@ -8,14 +8,9 @@ import { reducers } from './reducers'
 import { epics } from './epics'
 import './index.css'
 import AppLayout from './components/AppLayout/AppLayout'
+import FormBuilder from './components/widgets/FormBuilder/FormBuilder'
 import { axiosInstance } from './api/session'
 
-const App = (
-    <Provider customReducers={reducers} customEpics={epics} axiosInstance={axiosInstance()}>
-        <ConfigProvider locale={enUs}>
-            <AppLayout />
-        </ConfigProvider>
-    </Provider>
-)
+const App = <FormBuilder />
 
 render(App, document.getElementById('root'))

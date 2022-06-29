@@ -1,6 +1,13 @@
+const MonacoPlugin = require('monaco-editor-webpack-plugin')
+
 module.exports = {
     webpack: {
         configure: {
+            plugins: [
+                new MonacoPlugin({
+                    languages: ['json']
+                })
+            ],
             module: {
                 rules: [
                     /**

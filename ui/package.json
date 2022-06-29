@@ -39,9 +39,11 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-scripts": "^4.0.3",
+    "react-monaco-editor": "^0.48.0",
     "redux": "^4.1.0",
     "redux-observable": "^0.14.1",
     "rxjs": "^5.5.12",
+    "monaco-editor": "^0.33.0",
     "typescript": "^3.9.10"
   },
   "eslintConfig": {
@@ -97,6 +99,7 @@
     "@formily/shared": "^2.1.5",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "monaco-editor-webpack-plugin": "^7.0.1",
     "http-proxy-middleware": "^2.0.1",
     "prettier": "^2.3.2",
     "source-map-loader": "0.2.4"
